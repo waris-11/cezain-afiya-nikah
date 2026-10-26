@@ -142,8 +142,38 @@
       return;
     }
     const message = "Assalamu Alaikum! I would like to RSVP for the Nikkah of Cezain & Afiya Banu on 15 November 2026 at 12:30 PM. InshaAllah.";
-    this.href = "https://wa.me/" + WHATSAPP_NUMBER=6363406400 , 8310890137 + "?text=" + encodeURIComponent(message);
+    this.href = "https://wa.me/" + WHATSAPP_NUMBER = "916363406400"; + "?text=" + encodeURIComponent(message);
   });
+</script>
+  <script>
+function updateCountdown() {
+  const weddingDate = new Date("2026-11-15T12:30:00+05:30").getTime();
+  const now = new Date().getTime();
+  const distance = weddingDate - now;
+
+  if (distance <= 0) {
+    document.getElementById("days").textContent = "0";
+    document.getElementById("hours").textContent = "0";
+    document.getElementById("minutes").textContent = "0";
+    document.getElementById("seconds").textContent = "0";
+    return;
+  }
+
+  document.getElementById("days").textContent =
+    Math.floor(distance / (1000 * 60 * 60 * 24));
+
+  document.getElementById("hours").textContent =
+    Math.floor((distance / (1000 * 60 * 60)) % 24);
+
+  document.getElementById("minutes").textContent =
+    Math.floor((distance / (1000 * 60)) % 60);
+
+  document.getElementById("seconds").textContent =
+    Math.floor((distance / 1000) % 60);
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
 </script>
 </body>
 </html>
