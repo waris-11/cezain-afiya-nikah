@@ -105,79 +105,63 @@
 </main>
 <script>
   // EDIT THIS: country code + WhatsApp number, digits only, no +, spaces or dashes.
-  const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+  const WHATSAPP_NUMBER = "916363406400";
 
-  // Nikkah time: 15 Nov 2026, 12:30 PM India Standard Time (IST, UTC+05:30).
   const eventDate = new Date("2026-11-15T12:30:00+05:30");
 
   function updateCountdown() {
     const remaining = eventDate.getTime() - Date.now();
+    const ids = ["days", "hours", "minutes", "seconds"];
+
     if (remaining <= 0) {
-      ["days", "hours", "minutes", "seconds"].forEach(id => document.getElementById(id).textContent = "0");
+      ids.forEach(id => {
+        document.getElementById(id).textContent = "0";
+      });
       return;
     }
-    document.getElementById("days").textContent = Math.floor(remaining / 86400000);
-    document.getElementById("hours").textContent = Math.floor((remaining % 86400000) / 3600000);
-    document.getElementById("minutes").textContent = Math.floor((remaining % 3600000) / 60000);
-    document.getElementById("seconds").textContent = Math.floor((remaining % 60000) / 1000);
+
+    document.getElementById("days").textContent =
+      Math.floor(remaining / 86400000);
+    document.getElementById("hours").textContent =
+      Math.floor((remaining % 86400000) / 3600000);
+    document.getElementById("minutes").textContent =
+      Math.floor((remaining % 3600000) / 60000);
+    document.getElementById("seconds").textContent =
+      Math.floor((remaining % 60000) / 1000);
   }
+
   updateCountdown();
   setInterval(updateCountdown, 1000);
 
   const title = "Nikkah of Cezain & Afiya Banu";
-  const start = "20261115T073000Z"; // 12:30 PM IST
-  const end = "20261115T083000Z";   // Placeholder end time: 1:30 PM IST
-  const details = "Nikkah ceremony of Cezain and Afiya Banu. Venue: Sayyed Community Hall, Old Dandeli.";
-  const calendarUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE"
+  const start = "20261115T073000Z";
+  const end = "20261115T083000Z";
+  const details =
+    "Nikkah ceremony of Cezain and Afiya Banu. Venue: Sayyed Community Hall, Old Dandeli.";
+
+  const calendarUrl =
+    "https://calendar.google.com/calendar/render?action=TEMPLATE"
     + "&text=" + encodeURIComponent(title)
     + "&dates=" + start + "/" + end
     + "&details=" + encodeURIComponent(details)
-    + "&location=" + encodeURIComponent("Sayyed Community Hall, Old Dandeli, Dandeli");
+    + "&location=" + encodeURIComponent(
+      "Sayyed Community Hall, Old Dandeli, Dandeli"
+    );
+
   document.getElementById("calendarLink").href = calendarUrl;
 
   document.getElementById("rsvpLink").addEventListener("click", function(event) {
-    if (WHATSAPP_NUMBER.includes("X")) {
-      event.preventDefault();
-      alert("Please edit WHATSAPP_NUMBER in the code and add the family WhatsApp number first.");
-      return;
-    }
-    const message = "Assalamu Alaikum! I would like to RSVP for the Nikkah of Cezain & Afiya Banu on 15 November 2026 at 12:30 PM. InshaAllah.";
-    this.href = const WHATSAPP_NUMBER = "916363406400";
+    event.preventDefault();
 
-window.open(
-  "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message),
-  "_blank"
-);
-</script>
-  <script>
-function updateCountdown() {
-  const weddingDate = new Date("2026-11-15T12:30:00+05:30").getTime();
-  const now = new Date().getTime();
-  const distance = weddingDate - now;
+    const message =
+      "Assalamu Alaikum! I would like to RSVP for the Nikkah of Cezain & Afiya Banu on 15 November 2026 at 12:30 PM. InshaAllah.";
 
-  if (distance <= 0) {
-    document.getElementById("days").textContent = "0";
-    document.getElementById("hours").textContent = "0";
-    document.getElementById("minutes").textContent = "0";
-    document.getElementById("seconds").textContent = "0";
-    return;
-  }
+    const whatsappUrl =
+      "https://wa.me/" + WHATSAPP_NUMBER
+      + "?text=" + encodeURIComponent(message);
 
-  document.getElementById("days").textContent =
-    Math.floor(distance / (1000 * 60 * 60 * 24));
-
-  document.getElementById("hours").textContent =
-    Math.floor((distance / (1000 * 60 * 60)) % 24);
-
-  document.getElementById("minutes").textContent =
-    Math.floor((distance / (1000 * 60)) % 60);
-
-  document.getElementById("seconds").textContent =
-    Math.floor((distance / 1000) % 60);
-}
-
-updateCountdown();
-setInterval(updateCountdown, 1000);
+    window.open(whatsappUrl, "_blank");
+  });
 </script>
 </body>
 </html>
