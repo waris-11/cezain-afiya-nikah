@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10100f">
+<title>Nikkah Invitation | Cezain & Afiya Banu</title>
+<style>
+  :root {
+    --bg: #10100f;
+    --panel: #181714;
+    --gold: #d8b66a;
+    --gold-light: #f3dfaa;
+    --cream: #f8f0df;
+    --muted: #c5bda9;
+    --line: rgba(216,182,106,.35);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background:
+      radial-gradient(ellipse at top, rgba(126,93,34,.18), transparent 55%),
+      var(--bg);
+    color: var(--cream); font-family: Georgia, "Times New Roman", serif;
+    text-align: center; line-height: 1.6;
+  }
+  .page { width: min(100% - 28px, 760px); margin: 0 auto; padding: 24px 0 38px; }
+  .frame {
+    position: relative; overflow: hidden; border: 1px solid var(--line);
+    border-radius: 180px 180px 18px 18px; padding: 44px 22px 34px;
+    background: linear-gradient(160deg, rgba(255,255,255,.035), transparent 45%), var(--panel);
+    box-shadow: 0 18px 70px rgba(0,0,0,.35);
+  }
+  .frame:before, .frame:after {
+    content: ""; position: absolute; left: 12px; right: 12px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .frame:before { top: 18px; } .frame:after { bottom: 18px; }
+  .ornament { color: var(--gold); letter-spacing: .32em; font-size: 12px; text-transform: uppercase; }
+  .bismillah { color: var(--gold-light); font-size: clamp(22px, 5vw, 32px); margin: 10px 0 4px; }
+  .intro { color: var(--muted); font-size: 14px; letter-spacing: .08em; margin: 18px auto 12px; max-width: 480px; }
+  h1 { color: var(--gold-light); font-weight: 400; font-size: clamp(38px, 9vw, 66px); line-height: 1.08; margin: 14px 0; }
+  .amp { color: var(--gold); font-style: italic; font-size: .7em; display: block; margin: 3px 0; }
+  .parents { color: var(--muted); font-size: 14px; margin: 22px auto; max-width: 520px; }
+  .gold-rule { height: 1px; width: 140px; margin: 24px auto; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .date { color: var(--gold-light); font-size: clamp(22px, 5vw, 30px); letter-spacing: .08em; margin: 8px 0 0; }
+  .time { color: var(--muted); margin: 2px 0 12px; }
+  .venue { font-size: 19px; color: var(--cream); margin: 4px 0; }
+  .address { color: var(--muted); font-size: 14px; margin: 0 auto; max-width: 400px; }
+  .section { padding: 25px 12px 8px; }
+  h2 { color: var(--gold-light); font-size: 23px; font-weight: 400; margin: 0 0 14px; }
+  .countdown { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; max-width: 430px; margin: 0 auto; }
+  .timebox { border: 1px solid var(--line); border-radius: 10px; padding: 12px 4px; background: rgba(0,0,0,.16); }
+  .timebox strong { display: block; color: var(--gold-light); font-size: clamp(23px, 6vw, 32px); font-weight: 400; line-height: 1.2; }
+  .timebox span { display: block; color: var(--muted); font: 10px Arial,sans-serif; text-transform: uppercase; letter-spacing: .12em; margin-top: 5px; }
+  .buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 18px; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; min-height: 46px;
+    padding: 11px 18px; border: 1px solid var(--gold); border-radius: 30px;
+    color: var(--gold-light); text-decoration: none; font: 13px Arial,sans-serif;
+    letter-spacing: .04em; background: transparent; cursor: pointer;
+  }
+  .btn.primary { background: var(--gold); color: #17130a; font-weight: 700; }
+  .note { color: var(--muted); font-size: 13px; margin: 14px auto 0; max-width: 470px; }
+  footer { color: var(--gold); font-size: 12px; letter-spacing: .1em; padding: 25px 0 0; }
+  @media (min-width: 600px) { .frame { padding: 58px 42px 45px; } .section { padding-top: 32px; } }
+</style>
+</head>
+<body>
+<main class="page">
+  <section class="frame">
+    <div class="ornament">A blessed beginning</div>
+    <div class="bismillah" aria-label="Bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+    <p class="intro">WITH THE BLESSINGS OF ALLAH, OUR FAMILY INVITES YOU TO CELEBRATE THE NIKKAH OF</p>
+    <h1>Cezain <span class="amp">&amp;</span> Afiya Banu</h1>
+    <div class="gold-rule"></div>
+    <p class="parents"><strong>Cezain</strong><br>Son of Ashfaque Abdullah Bharooti</p>
+    <p class="parents"><strong>Afiya Banu</strong><br>Daughter of Maqbool Bijapur</p>
+    <div class="gold-rule"></div>
+    <div class="ornament">The Nikkah Ceremony</div>
+    <p class="date">Sunday, 15 November 2026</p>
+    <p class="time">12:30 PM</p>
+    <p class="venue">Sayyed Community Hall</p>
+    <p class="address">Old Dandeli, Dandeli</p>
+    <div class="section">
+      <h2>Counting down to the blessed day</h2>
+      <div class="countdown" aria-label="Countdown">
+        <div class="timebox"><strong id="days">--</strong><span>Days</span></div>
+        <div class="timebox"><strong id="hours">--</strong><span>Hours</span></div>
+        <div class="timebox"><strong id="minutes">--</strong><span>Minutes</span></div>
+        <div class="timebox"><strong id="seconds">--</strong><span>Seconds</span></div>
+      </div>
+      <div class="buttons">
+        <a class="btn primary" id="calendarLink" href="#">＋ Save the Date</a>
+        <a class="btn" id="mapLink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Sayyed+Community+Hall+Old+Dandeli">Get Directions ↗</a>
+      </div>
+      <p class="note">Your presence and prayers will make this blessed occasion even more special to our family.</p>
+      <div class="buttons">
+        <a class="btn primary" id="rsvpLink" href="#">RSVP on WhatsApp</a>
+      </div>
+      <p class="note">Please update the WhatsApp number in the website code before publishing.</p>
+    </div>
+    <footer>WITH LOVE &amp; DUAS · بِإِذْنِ اللَّهِ</footer>
+  </section>
+</main>
+<script>
+  // EDIT THIS: country code + WhatsApp number, digits only, no +, spaces or dashes.
+  const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+
+  // Nikkah time: 15 Nov 2026, 12:30 PM India Standard Time (IST, UTC+05:30).
+  const eventDate = new Date("2026-11-15T12:30:00+05:30");
+
+  function updateCountdown() {
+    const remaining = eventDate.getTime() - Date.now();
+    if (remaining <= 0) {
+      ["days", "hours", "minutes", "seconds"].forEach(id => document.getElementById(id).textContent = "0");
+      return;
+    }
+    document.getElementById("days").textContent = Math.floor(remaining / 86400000);
+    document.getElementById("hours").textContent = Math.floor((remaining % 86400000) / 3600000);
+    document.getElementById("minutes").textContent = Math.floor((remaining % 3600000) / 60000);
+    document.getElementById("seconds").textContent = Math.floor((remaining % 60000) / 1000);
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  const title = "Nikkah of Cezain & Afiya Banu";
+  const start = "20261115T073000Z"; // 12:30 PM IST
+  const end = "20261115T083000Z";   // Placeholder end time: 1:30 PM IST
+  const details = "Nikkah ceremony of Cezain and Afiya Banu. Venue: Sayyed Community Hall, Old Dandeli.";
+  const calendarUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE"
+    + "&text=" + encodeURIComponent(title)
+    + "&dates=" + start + "/" + end
+    + "&details=" + encodeURIComponent(details)
+    + "&location=" + encodeURIComponent("Sayyed Community Hall, Old Dandeli, Dandeli");
+  document.getElementById("calendarLink").href = calendarUrl;
+
+  document.getElementById("rsvpLink").addEventListener("click", function(event) {
+    if (WHATSAPP_NUMBER.includes("X")) {
+      event.preventDefault();
+      alert("Please edit WHATSAPP_NUMBER in the code and add the family WhatsApp number first.");
+      return;
+    }
+    const message = "Assalamu Alaikum! I would like to RSVP for the Nikkah of Cezain & Afiya Banu on 15 November 2026 at 12:30 PM. InshaAllah.";
+    this.href = "https://wa.me/" + WHATSAPP_NUMBER=6363406400 , 8310890137 + "?text=" + encodeURIComponent(message);
+  });
+</script>
+</body>
+</html>
