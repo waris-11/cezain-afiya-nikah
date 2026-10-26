@@ -142,8 +142,12 @@
       return;
     }
     const message = "Assalamu Alaikum! I would like to RSVP for the Nikkah of Cezain & Afiya Banu on 15 November 2026 at 12:30 PM. InshaAllah.";
-    this.href = "https://wa.me/" + WHATSAPP_NUMBER = "916363406400"; + "?text=" + encodeURIComponent(message);
-  });
+    this.href = const WHATSAPP_NUMBER = "916363406400";
+
+window.open(
+  "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message),
+  "_blank"
+);
 </script>
   <script>
 function updateCountdown() {
